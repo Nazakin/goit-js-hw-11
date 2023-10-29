@@ -50,7 +50,7 @@ function displayImages(images) {
     });
 }
 let page = 1;
-const perPage = 20;
+const perPage = 40;
 
 
 searchForm.addEventListener('submit', async function (e) {
