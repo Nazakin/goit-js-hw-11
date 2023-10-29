@@ -1,4 +1,4 @@
-
+import Notiflix from 'notiflix';
 const searchForm = document.getElementById('search-form');
 const imageContainer = document.getElementById('image-container');
 
@@ -90,13 +90,13 @@ async function searchImages() {
                 if (data.hits.length < perPage) {
                     loadMoreButton.style.display = 'none'; 
                     if (page === 1) {
-                        alert("We're sorry, but you've reached the end of search results.");
+                        Notiflix.Notify.info("We're sorry, but you've reached the end of search results.");
                     }
                 } else {
                     loadMoreButton.style.display = 'block';
                 }
             } else {
-                alert("Sorry, there are no images matching your search query. Please try again.");
+                Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.");
             }
         } catch (error) {
             console.error(error);
