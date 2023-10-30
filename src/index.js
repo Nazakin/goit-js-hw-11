@@ -89,9 +89,9 @@ async function searchImages() {
 
                 if (data.hits.length < perPage) {
                     loadMoreButton.style.display = 'none'; 
-                    if (page === 1) {
+        
                         Notiflix.Notify.info("We're sorry, but you've reached the end of search results.");
-                    }
+    
                 } else {
                     loadMoreButton.style.display = 'block';
                 }
